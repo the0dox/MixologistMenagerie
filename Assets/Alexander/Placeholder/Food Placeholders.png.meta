@@ -1,0 +1,1174 @@
+fileFormatVersion: 2
+guid: f0b5af009691bc5409f411894b89db89
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Food Placeholders_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 783
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b926295e192d2ab4aa1e2b5e441d2aba
+      internalID: -345898392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Placeholders_1
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 783
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e6e8071120581b4289d60e00e631e36
+      internalID: 1476886478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Placeholders_2
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 783
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 014c375fae0e88b47ba8e42916fba1b0
+      internalID: 718766432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Placeholders_3
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 783
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8988a70e8bb9b5449a43a73e000ed821
+      internalID: 83366421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Placeholders_4
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 783
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0cc8bc7cffde7a409c8413b467ee11a
+      internalID: 2077860771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Placeholders_5
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 783
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b81920c5748bf18429ec46a22d6b5f0e
+      internalID: -1939457376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Placeholders_6
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 783
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 212850d74e3a1bb45a08267145d80c30
+      internalID: 314325283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Placeholders_7
+      rect:
+        serializedVersion: 2
+        x: 1085
+        y: 783
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56e291c9a631bc64498ed8223b3e146e
+      internalID: 1868854188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Placeholders_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 628
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd45439a28b2c7045a18704f61c3c27d
+      internalID: -282301375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Placeholders_9
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 628
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e20a5d376dac58499f09a88d7c7fd0f
+      internalID: -1833068584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Placeholders_10
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 628
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a146d5469b2a39d4da3f03145b31a0f3
+      internalID: 1274817135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Placeholders_11
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 628
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99c294e366554994dbc2d2e81803dfc0
+      internalID: -407672525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Placeholders_12
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 628
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cd6d7c8a45b0524e8de23fbb182c425
+      internalID: -1181143801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Placeholders_13
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 628
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b75824f0a671ffe45a843a59a128a13d
+      internalID: -1761440130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Placeholders_14
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 628
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f15e862d98c0774b9f770ea5f75ef9a
+      internalID: 73879911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Placeholders_15
+      rect:
+        serializedVersion: 2
+        x: 1085
+        y: 628
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f32b83efbec7834ca9a31d0c77328ee
+      internalID: 635868186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Placeholders_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 473
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59b8950d3dd46984999efe5a320c0a2e
+      internalID: 175768004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Placeholders_17
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 473
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00ab925cf85eef64a99c509fc60b423f
+      internalID: 83519337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Placeholders_18
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 473
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ca54424c59f4ad449ee3c7fdf16b162
+      internalID: 1181787026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Placeholders_19
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 473
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2853f6f956945849856558dab4915ea
+      internalID: 1085423537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Placeholders_20
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 473
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 757a3b9ff154dfb4994a8958533065f4
+      internalID: 1229506924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Placeholders_21
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 473
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 748b015b13493e74bb68a00e73504ca3
+      internalID: -1930988686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Placeholders_22
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 473
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe7b597eb2da9c04b8bea35d1b566fb2
+      internalID: -1735185610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Placeholders_23
+      rect:
+        serializedVersion: 2
+        x: 1085
+        y: 473
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 789338314d27d45418d06f7dff731c4a
+      internalID: -760142427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Placeholders_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 318
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab5cbeb043a94154e8e161efe562ec76
+      internalID: -838609058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Placeholders_25
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 318
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b0a13dbe00e44442a189ae844a7f4b1
+      internalID: -1898107219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Placeholders_26
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 318
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 373f0ad85937e57408c5cf9e027edfc7
+      internalID: 2049753778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Placeholders_27
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 318
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 172298e0421e7da43b3d22d2062af62d
+      internalID: -1830629986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Placeholders_28
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 318
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4d60681245ed1a4cb7a44c74be5b765
+      internalID: -1976661851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Placeholders_29
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 318
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12febcee857cd1d4fa1b2ba56ab5d505
+      internalID: -1523432224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Placeholders_30
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 318
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbd7321ae9789ad46a4a00b04e5d6d7c
+      internalID: 1784732715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Placeholders_31
+      rect:
+        serializedVersion: 2
+        x: 1085
+        y: 318
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c26d310a270e7e4ab76d6e9ed2ea38a
+      internalID: 1680557007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Placeholders_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 163
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e07c8d282dd55924a88872dcb8ef42a8
+      internalID: -655274099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Placeholders_33
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 163
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10a8a86d03a9ffc4091863285c077ea7
+      internalID: 86455216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Placeholders_34
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 163
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3217a5fd6984ecc4ab97c7446ad38909
+      internalID: 1731217757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Placeholders_35
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 163
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e0ca84d288ce2e44944a5dbd721dcce
+      internalID: -1337513227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Placeholders_36
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 163
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5d5653b3d6da0a4da0a3a584a673681
+      internalID: 143383620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Placeholders_37
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 163
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1df6c250aee141a45a5ae6458c4903db
+      internalID: -1882092002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Placeholders_38
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 163
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 810e7de0d8d20a349a7c18a3112c24bd
+      internalID: 1340809769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Placeholders_39
+      rect:
+        serializedVersion: 2
+        x: 1085
+        y: 163
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bd00d115b18c544c952c4bfa511d5ff
+      internalID: 1982208722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Placeholders_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14faf8b6b9951384496713e38c99e815
+      internalID: -2080633974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Placeholders_41
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 8
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 296d4747d4b5aa34ebcb9955b95d7e08
+      internalID: 1371240730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Placeholders_42
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 8
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c20070c434669f14bae2c0efee6bf307
+      internalID: 230436502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Placeholders_43
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 8
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8027054d4980b3546a57128ea2a3fe3d
+      internalID: 1357624136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Placeholders_44
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 8
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3acf050aad80b8840814bb7721928471
+      internalID: -584372809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Placeholders_45
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 8
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 805a44fb69615c745be026753e50a60a
+      internalID: -1798599852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food Placeholders_46
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 8
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19084528b80f3b04bb5489eb9a247997
+      internalID: 483717512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Food Placeholders_0: -345898392
+      Food Placeholders_1: 1476886478
+      Food Placeholders_10: 1274817135
+      Food Placeholders_11: -407672525
+      Food Placeholders_12: -1181143801
+      Food Placeholders_13: -1761440130
+      Food Placeholders_14: 73879911
+      Food Placeholders_15: 635868186
+      Food Placeholders_16: 175768004
+      Food Placeholders_17: 83519337
+      Food Placeholders_18: 1181787026
+      Food Placeholders_19: 1085423537
+      Food Placeholders_2: 718766432
+      Food Placeholders_20: 1229506924
+      Food Placeholders_21: -1930988686
+      Food Placeholders_22: -1735185610
+      Food Placeholders_23: -760142427
+      Food Placeholders_24: -838609058
+      Food Placeholders_25: -1898107219
+      Food Placeholders_26: 2049753778
+      Food Placeholders_27: -1830629986
+      Food Placeholders_28: -1976661851
+      Food Placeholders_29: -1523432224
+      Food Placeholders_3: 83366421
+      Food Placeholders_30: 1784732715
+      Food Placeholders_31: 1680557007
+      Food Placeholders_32: -655274099
+      Food Placeholders_33: 86455216
+      Food Placeholders_34: 1731217757
+      Food Placeholders_35: -1337513227
+      Food Placeholders_36: 143383620
+      Food Placeholders_37: -1882092002
+      Food Placeholders_38: 1340809769
+      Food Placeholders_39: 1982208722
+      Food Placeholders_4: 2077860771
+      Food Placeholders_40: -2080633974
+      Food Placeholders_41: 1371240730
+      Food Placeholders_42: 230436502
+      Food Placeholders_43: 1357624136
+      Food Placeholders_44: -584372809
+      Food Placeholders_45: -1798599852
+      Food Placeholders_46: 483717512
+      Food Placeholders_5: -1939457376
+      Food Placeholders_6: 314325283
+      Food Placeholders_7: 1868854188
+      Food Placeholders_8: -282301375
+      Food Placeholders_9: -1833068584
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
