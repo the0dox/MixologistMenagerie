@@ -4,16 +4,50 @@ using UnityEngine;
 
 public class BlenderBehavior : MonoBehaviour
 {
-    private Stack<Draggable> _contents = new Stack<Draggable>();
+    private const int SIZE = 10;
+    private GameObject[] _contents;
+    private int _index;
     [SerializeField] private GameObject _potionPrefab;
 
-    // called by the incoming object
-    public void RecieveObject(Draggable _incommingObject)
+    void Start()
     {
-        if(_incommingObject.CompareTag("Ingredient"))
+        _contents = new GameObject[SIZE];
+        ClearContents();
+    }
+
+    void OnDestroy()
+    {
+        _contents = null;
+    }
+
+    private void ClearContents()
+    {
+        for(int i = 0; i < SIZE; i++)
         {
-            _incommingObject.enabled = false;
-            _contents.Push(_incommingObject);
+            if(_contents[i])
+            {
+                GameObject _instance = _contents[i];
+                _contents[i] = null;
+                Destroy(_instance);
+            }
+        }
+        _index = 0;
+    }
+
+    private void AddIngredient(Draggable newItem)
+    {
+        _contents[_index] = newItem.gameObject;
+        _index++;
+    }
+
+    // called by the incoming object
+    public void RecieveObject(Draggable incommingObject)
+    {
+        if(incommingObject.CompareTag("Ingredient") && _index < SIZE)
+        {
+            incommingObject.transform.position = transform.position + Vector3.up * 3;
+            incommingObject.enabled = false;
+            AddIngredient(incommingObject);
         }
     }
 
@@ -25,13 +59,9 @@ public class BlenderBehavior : MonoBehaviour
 
     public void Blend()
     {
-        if(_contents.Count > 0)
+        if(_index > 0)
         {
-            while(_contents.Count > 0)
-            {
-                Destroy(_contents.Pop().gameObject);
-            }
-            _contents.Clear();
+            ClearContents();
             GameObject potion = Instantiate(_potionPrefab);
             potion.transform.position = transform.position + (Vector3.right * 4);
         }

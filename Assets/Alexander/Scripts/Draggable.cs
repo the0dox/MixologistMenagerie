@@ -71,6 +71,7 @@ public class Draggable : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginDra
         {
             _dragTarget.RecieveObject(this);
         }
+        Debug.Log($"dragged onto {eventData.pointerCurrentRaycast.gameObject}", eventData.pointerCurrentRaycast.gameObject);
     }
     
     // called every frame this object is grabbed, updates its position drag first starts
