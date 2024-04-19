@@ -5,13 +5,13 @@ using UnityEngine;
 public class BlenderBehavior : MonoBehaviour
 {
     private const int SIZE = 10;
-    private GameObject[] _contents;
+    private IngredientBehavior[] _contents;
     private int _index;
     [SerializeField] private GameObject _potionPrefab;
-
+    [SerializeField] private Transform _depositPoint;
     void Start()
     {
-        _contents = new GameObject[SIZE];
+        _contents = new IngredientBehavior[SIZE];
         ClearContents();
     }
 
@@ -26,17 +26,17 @@ public class BlenderBehavior : MonoBehaviour
         {
             if(_contents[i])
             {
-                GameObject _instance = _contents[i];
+                IngredientBehavior _instance = _contents[i];
                 _contents[i] = null;
-                Destroy(_instance);
+                Destroy(_instance.gameObject);
             }
         }
         _index = 0;
     }
 
-    private void AddIngredient(Draggable newItem)
+    private void AddIngredient(IngredientBehavior newItem)
     {
-        _contents[_index] = newItem.gameObject;
+        _contents[_index] = newItem;
         _index++;
     }
 
@@ -47,7 +47,11 @@ public class BlenderBehavior : MonoBehaviour
         {
             incommingObject.transform.position = transform.position + Vector3.up * 3;
             incommingObject.enabled = false;
-            AddIngredient(incommingObject);
+            AddIngredient(incommingObject.GetComponent<IngredientBehavior>());
+        }
+        else
+        {
+            incommingObject.Return();
         }
     }
 
@@ -61,9 +65,10 @@ public class BlenderBehavior : MonoBehaviour
     {
         if(_index > 0)
         {
+            PotionBehavior potion = Instantiate(_potionPrefab).GetComponent<PotionBehavior>();
+            potion.CombineIngredients(_contents);
             ClearContents();
-            GameObject potion = Instantiate(_potionPrefab);
-            potion.transform.position = transform.position + (Vector3.right * 4);
+            potion.transform.position = _depositPoint.position;
         }
         else
         {
