@@ -10,7 +10,17 @@ public class BlenderBehavior : MonoBehaviour
     // called by the incoming object
     public void RecieveObject(Draggable _incommingObject)
     {
-        _contents.Push(_incommingObject);
+        if(_incommingObject.CompareTag("Ingredient"))
+        {
+            _incommingObject.enabled = false;
+            _contents.Push(_incommingObject);
+        }
+    }
+
+    public void OnMouseDown()
+    {
+        Debug.Log("click");
+        Blend();
     }
 
     public void Blend()
@@ -24,6 +34,10 @@ public class BlenderBehavior : MonoBehaviour
             _contents.Clear();
             GameObject potion = Instantiate(_potionPrefab);
             potion.transform.position = transform.position + (Vector3.right * 4);
+        }
+        else
+        {
+            Debug.Log("no contents");
         }
     }
 }

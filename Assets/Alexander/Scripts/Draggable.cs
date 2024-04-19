@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Burst.Intrinsics;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -41,6 +43,7 @@ public class Draggable : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginDra
         if(_dragged)
         {
             transform.position = Vector2.Lerp(transform.position, _targetPosition, Time.fixedDeltaTime * _speed);
+            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.identity, Time.deltaTime * _speed); 
         }
     }
 
@@ -55,6 +58,8 @@ public class Draggable : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginDra
     {
         _dragged = true;
         _body.simulated = false;
+        _body.totalTorque = 0;
+        _body.totalForce = Vector2.zero;
     }
 
     // called when the object is let go

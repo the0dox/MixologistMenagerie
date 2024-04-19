@@ -13,6 +13,6 @@ public class DragReciever : MonoBehaviour
     // called by the incoming object
     public void RecieveObject(Draggable _incommingObject)
     {
-        _recievedObject?.Invoke(_incommingObject);
+        _recievedObject.Invoke(_incommingObject);
     }
 } 
