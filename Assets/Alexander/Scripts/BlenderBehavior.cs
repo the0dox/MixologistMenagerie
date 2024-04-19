@@ -9,6 +9,7 @@ public class BlenderBehavior : MonoBehaviour
     private int _index;
     [SerializeField] private GameObject _potionPrefab;
     [SerializeField] private Transform _depositPoint;
+    [SerializeField] private float _radius; 
     void Start()
     {
         _contents = new IngredientBehavior[SIZE];
@@ -45,8 +46,11 @@ public class BlenderBehavior : MonoBehaviour
     {
         if(incommingObject.CompareTag("Ingredient") && _index < SIZE)
         {
-            incommingObject.transform.position = transform.position + Vector3.up * 3;
             incommingObject.enabled = false;
+            if(Vector2.Distance(transform.position, incommingObject.transform.position) > _radius)
+            {
+                incommingObject.transform.position += (transform.position - incommingObject.transform.position).normalized * _radius / 2;
+            }
             AddIngredient(incommingObject.GetComponent<IngredientBehavior>());
         }
         else
