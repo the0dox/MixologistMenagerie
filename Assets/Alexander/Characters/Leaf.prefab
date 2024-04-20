@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7790871015306564030}
   - component: {fileID: 1463188594440809407}
   - component: {fileID: 1322861685777918051}
+  - component: {fileID: 6712441881039403038}
   m_Layer: 3
   m_Name: Leaf
   m_TagString: Untagged
@@ -106,3 +107,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6712441881039403038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2549285875593937868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73abb51df7a1c07478d4666fac1bd2ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _positiveMessage: This is perfect thanks!
+  _negativeMessage: Oh..... This isn't what I wanted
+  _offset: {x: 0, y: 5, z: 0}

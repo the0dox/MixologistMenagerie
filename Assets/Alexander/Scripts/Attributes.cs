@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Text;
 using UnityEngine;
 
 // bag of stats, designed to be modifiable if we go a different direction
@@ -38,7 +39,24 @@ public struct Attributes
     // returns a safe string of thiss structs contents
     public override string ToString()
     {
-        return string.Format($"Attack: {AttackUp}, Sweetness {Sweetness}, Bitterness {Bitter}, FireDefense {FireDefense}");
+        StringBuilder output = new StringBuilder();
+        if(AttackUp != 0)
+        {
+            output.Append("Attack Up: " + AttackUp);
+        }
+        if(Sweetness != 0)
+        {
+            output.Append("Sweetness: " + Sweetness);
+        }
+        if(Bitter != 0)
+        {
+            output.Append("Bitterness: " + Bitter);
+        }
+        if(FireDefense != 0)
+        {
+            output.Append("Fire Defense: " + FireDefense);
+        }
+        return output.ToString();
     }
 
 }

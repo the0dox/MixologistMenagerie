@@ -40,6 +40,18 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: BG
+    uniqueID: 3610737591
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Characters
+    uniqueID: 3870041365
+    locked: 0
+  - name: Gameplay
+    uniqueID: 1139857205
+    locked: 0
+  - name: Text
+    uniqueID: 3057305833
     locked: 0

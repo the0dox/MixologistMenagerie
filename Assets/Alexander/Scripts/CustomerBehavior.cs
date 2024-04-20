@@ -8,10 +8,12 @@ public class CustomerBehavior : MonoBehaviour
 {
     // reference to the animator attached to this charater
     private Animator _animationComponent;
+    private SpeakingBehavior _speakingComponent;
     // library of potential looks
     [SerializeField] private GameObject[] _sprites;
     [SerializeField] private Attributes _desiredAttributes;
     [SerializeField] private Attributes _unwantedAttributes;
+    [SerializeField] private Vector3 _textOffset;
     private bool _asked;
 
     // generate random look on creation
@@ -19,6 +21,7 @@ public class CustomerBehavior : MonoBehaviour
     {
         GameObject visual = Instantiate(_sprites[Random.Range(0, _sprites.Length)], transform);
         _animationComponent = GetComponentInChildren<Animator>();
+        _speakingComponent = GetComponentInChildren<SpeakingBehavior>();
     }
     
     // called by the incoming object
@@ -41,10 +44,11 @@ public class CustomerBehavior : MonoBehaviour
 
     public void Ask()
     {
-        if(!_asked)
+        if(!_asked && _animationComponent.GetCurrentAnimatorStateInfo(0).normalizedTime > 1)
         {
-            _asked = true;
             _animationComponent.SetTrigger("Asking");
+            _speakingComponent.Say("Can I get a potion with at least: " +  _desiredAttributes + " and no more than " + _unwantedAttributes + "?");
+            _asked = true;
         }
     }
 
@@ -96,11 +100,14 @@ public class CustomerBehavior : MonoBehaviour
         if(score >= 0)
         {
             _animationComponent.SetTrigger("Happy");
+            _speakingComponent.Say(MessageTypes.Positive);
         }
         else
         {
             _animationComponent.SetTrigger("Angry");
+            _speakingComponent.Say(MessageTypes.Negative);
         }
+        ScoreManager.AddGold(score + 10);
         StartCoroutine(LeaveDelay(3));
     }
 
