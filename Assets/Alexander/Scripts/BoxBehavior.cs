@@ -21,7 +21,7 @@ public class BoxBehavior : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginD
     // when an ingredient is pulled back to this box because it was dragged to an invalid point delete it
     void OnTriggerStay2D(Collider2D other)
     {
-        if(other.gameObject.Equals(_active.gameObject) && !_active.Dragged)
+        if(_active && other.gameObject.Equals(_active.gameObject) && !_active.Dragged)
         {
             Destroy(_active.gameObject);
             _active = null;
