@@ -8,14 +8,11 @@ public class BoxBehavior : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginD
 {
     // reference to the ingredient this box produces
     [SerializeField] private GameObject _prefab;
-    // reference to the icon indicating this objects contents
-    [SerializeField] private SpriteRenderer _icon;
     // reference to the current ingredient being dragged
     private Draggable _active;
 
     void Awake()
     {
-        _icon.sprite = _prefab.GetComponent<SpriteRenderer>().sprite;
         GetComponent<TooltipTarget>().Tooltip = _prefab.GetComponent<TooltipTarget>().Tooltip;
     }
 

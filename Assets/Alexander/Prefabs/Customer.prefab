@@ -92,8 +92,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sprites:
-  - {fileID: 2549285875593937868, guid: 3cac241007e115a4d961f1a45df4799f, type: 3}
+  - {fileID: 2549285875593937868, guid: 0b2acb54a9ae4c24ba475befefe96843, type: 3}
   - {fileID: 2549285875593937868, guid: bb3800d2983e8c944b1ff225726e5e81, type: 3}
+  - {fileID: 2549285875593937868, guid: 3cac241007e115a4d961f1a45df4799f, type: 3}
   _desiredAttributes:
     AttackUp: 4
     Sweetness: 0

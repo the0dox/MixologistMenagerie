@@ -62,6 +62,7 @@ public class Draggable : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginDra
     public void OnPickup()
     {
         StopAllCoroutines();
+        Debug.Log("picked up");
         _dragged = true;
         _body.simulated = false;
         _body.totalTorque = 0;
@@ -92,6 +93,7 @@ public class Draggable : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginDra
 
     public void Return()
     {
+        StopAllCoroutines();
         StartCoroutine(ReturnToPositionDelay());
     }
     
@@ -106,6 +108,7 @@ public class Draggable : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginDra
     IEnumerator ReturnToPositionDelay()
     {
         _dragged = true;
+        _body.simulated = false;
         _targetPosition = originalPosition;
         while(Vector3.Distance(transform.position, originalPosition) > 0.1)
         {

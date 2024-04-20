@@ -65,6 +65,32 @@ MonoBehaviour:
       m_SpriteOverride: {fileID: 21300000, guid: 86664e49f217a494fa79c85a0357bbad, type: 3}
     m_FromMain: 0
     m_EntryOverrideCount: 4
+  - m_Name: Laurel
+    m_Hash: 974154568
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: Neutral
+      m_Hash: 731503724
+      m_Sprite: {fileID: 21300000, guid: 48b183aeee217154282dfb08a157219a, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 48b183aeee217154282dfb08a157219a, type: 3}
+    - m_Name: Talking
+      m_Hash: 370501142
+      m_Sprite: {fileID: 21300000, guid: 1a767350b3bddb44fbc95347655e35ce, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 1a767350b3bddb44fbc95347655e35ce, type: 3}
+    - m_Name: Positive
+      m_Hash: 864613939
+      m_Sprite: {fileID: 21300000, guid: ff9ef63daa80b2048bc3aa9fbcffe1e1, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: ff9ef63daa80b2048bc3aa9fbcffe1e1, type: 3}
+    - m_Name: Negative
+      m_Hash: 385777960
+      m_Sprite: {fileID: 21300000, guid: 81f513d212fb7b74baff4b513ce562eb, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 81f513d212fb7b74baff4b513ce562eb, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 4
   m_PrimaryLibraryGUID: 
-  m_ModificationHash: 638492132346232191
+  m_ModificationHash: 638492183208305031
   m_Version: 1
