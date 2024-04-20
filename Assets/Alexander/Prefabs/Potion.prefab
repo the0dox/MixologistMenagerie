@@ -131,6 +131,7 @@ MonoBehaviour:
   _offset: {x: 0, y: 0.25}
   _dragged: 0
   _returnTime: 1
+  _pickUpSound: 5
 --- !u!114 &5729546631667024339
 MonoBehaviour:
   m_ObjectHideFlags: 0

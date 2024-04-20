@@ -12,6 +12,14 @@ public class PotionBehavior : MonoBehaviour
     private void Awake()
     {
         _tooltip = GetComponent<TooltipTarget>();
+        if(Random.Range(0,2) < 1)
+        {
+            AudioManager.PlaySound(SoundKey.PotionReady1,transform.position);
+        }   
+        else
+        {
+            AudioManager.PlaySound(SoundKey.PotionReady2,transform.position);
+        }
     }
 
 

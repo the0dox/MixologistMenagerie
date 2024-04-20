@@ -116,12 +116,14 @@ public class CustomerBehavior : MonoBehaviour
         if(score >= 0)
         {
             _resolver.SetCategoryAndLabel(_resolver.GetCategory(), "Positive");
+            AudioManager.PlaySound(SoundKey.Happy, transform.position);
             _animationComponent.SetTrigger("Happy");
             _speakingComponent.Say(MessageTypes.Positive);
         }
         else
         {
             _resolver.SetCategoryAndLabel(_resolver.GetCategory(), "Negative");
+            AudioManager.PlaySound(SoundKey.Sad, transform.position);
             _animationComponent.SetTrigger("Angry");
             _speakingComponent.Say(MessageTypes.Negative);
         }

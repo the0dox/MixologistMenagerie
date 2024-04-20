@@ -25,6 +25,7 @@ public class Draggable : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginDra
     // reference to the position the object was last held it can return to
     private Vector2 originalPosition;
     [SerializeField] private float _returnTime;
+    [SerializeField] private SoundKey _pickUpSound;
 
     // Start is called before the first frame update
     void Awake()
@@ -62,7 +63,7 @@ public class Draggable : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginDra
     public void OnPickup()
     {
         StopAllCoroutines();
-        Debug.Log("picked up");
+        AudioManager.PlaySound(_pickUpSound, transform.position);
         _dragged = true;
         _body.simulated = false;
         _body.totalTorque = 0;
@@ -94,6 +95,7 @@ public class Draggable : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginDra
     public void Return()
     {
         StopAllCoroutines();
+        AudioManager.PlaySound(SoundKey.DropFailure, transform.position);
         StartCoroutine(ReturnToPositionDelay());
     }
     

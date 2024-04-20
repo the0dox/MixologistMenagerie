@@ -13,6 +13,7 @@ public class BlenderBehavior : MonoBehaviour
     [SerializeField] private float _radius; 
     private Animator _animationComponent;
     private bool _interactable;
+    private AudioSource _sound;
     [SerializeField] private float _blendTime = 2;
 
     void Start()
@@ -20,6 +21,7 @@ public class BlenderBehavior : MonoBehaviour
         _interactable = true;
         _contents = new IngredientBehavior[SIZE];
         _animationComponent = GetComponent<Animator>();
+        _sound = GetComponent<AudioSource>();
         ClearContents();
     }
 
@@ -44,6 +46,7 @@ public class BlenderBehavior : MonoBehaviour
 
     private void AddIngredient(IngredientBehavior newItem)
     {
+        AudioManager.PlaySound(SoundKey.DropSuccessful, transform.position);
         _contents[_index] = newItem;
         _index++;
     }
@@ -68,7 +71,6 @@ public class BlenderBehavior : MonoBehaviour
 
     public void OnMouseDown()
     {
-        Debug.Log("click");
         Blend();
     }
 
@@ -82,11 +84,14 @@ public class BlenderBehavior : MonoBehaviour
         else
         {
             Debug.Log("no contents");
+            AudioManager.PlaySound(SoundKey.DropFailure, transform.position);
+            _animationComponent.SetTrigger("Fail");
         }
     }
 
     IEnumerator BlendDelay()
     {
+        _sound.Play();
         _interactable = false;
         float dir = 1;
         for(float i = 0; i < _blendTime; i += Time.fixedDeltaTime)

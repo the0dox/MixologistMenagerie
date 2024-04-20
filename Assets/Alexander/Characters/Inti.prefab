@@ -123,6 +123,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _positiveMessage: This is perfect thanks!
   _negativeMessage: Oh..... This isn't what I wanted
+  _voiceType: 13
   _offset: {x: 0, y: 6, z: 0}
 --- !u!114 &3082996213313394748
 MonoBehaviour:

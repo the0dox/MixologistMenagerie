@@ -28,7 +28,7 @@ public class AudioManager : MonoBehaviour
         }
         else
         {
-            AudioSource.PlayClipAtPoint(s_instance._sounds[key], position);
+            AudioSource.PlayClipAtPoint(s_instance._sounds[key], Camera.main.transform.position, 0.8f);
         }
     }
 }
@@ -44,11 +44,19 @@ public enum SoundKey
 {
     None,
     Blend,
-    Ingredient,
+    Pickup,
+    DropSuccessful,
+    DropFailure,
     Potion,
     Talk,
     Happy,
     Sad,
     Coin,
     Leave,
+    TalkA,
+    TalkB,
+    TalkC,
+    TalkD,
+    PotionReady1,
+    PotionReady2
 }
