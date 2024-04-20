@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 1463188594440809407}
   - component: {fileID: 1322861685777918051}
   - component: {fileID: 6712441881039403038}
+  - component: {fileID: 1084070163496672280}
+  - component: {fileID: 54761106878730202}
   m_Layer: 3
   m_Name: Leaf
   m_TagString: Untagged
@@ -122,3 +124,33 @@ MonoBehaviour:
   _positiveMessage: This is perfect thanks!
   _negativeMessage: Oh..... This isn't what I wanted
   _offset: {x: 0, y: 5, z: 0}
+--- !u!114 &1084070163496672280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2549285875593937868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c29cff538c195c249b69c6f2236de67b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Library: []
+  m_SpriteLibraryAsset: {fileID: 7108339969198208228, guid: cbfff0c19fdbf6946ae3e6e56852c81c, type: 3}
+--- !u!114 &54761106878730202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2549285875593937868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed8b1ae4e4e52b34ea557c1c11e076fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_CategoryHash: 1.205195e-15
+  m_labelHash: 1.0932483e-12
+  m_SpriteKey: 0
+  m_SpriteHash: 76575612

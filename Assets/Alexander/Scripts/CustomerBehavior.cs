@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.U2D.Animation;
 
 // created by alexander
 // code for customer behavior
@@ -13,6 +14,7 @@ public class CustomerBehavior : MonoBehaviour
     [SerializeField] private GameObject[] _sprites;
     [SerializeField] private Attributes _desiredAttributes;
     [SerializeField] private Attributes _unwantedAttributes;
+    private SpriteResolver _resolver;
 
     [SerializeField] private Attributes[] _potentialAttributes;
     private bool _asked;
@@ -23,6 +25,7 @@ public class CustomerBehavior : MonoBehaviour
         GameObject visual = Instantiate(_sprites[Random.Range(0, _sprites.Length)], transform);
         _animationComponent = GetComponentInChildren<Animator>();
         _speakingComponent = GetComponentInChildren<SpeakingBehavior>();
+        _resolver = GetComponentInChildren<SpriteResolver>();
         GeneratePersonality();
     }
 
@@ -58,6 +61,7 @@ public class CustomerBehavior : MonoBehaviour
     {
         if(!_asked && _animationComponent.GetCurrentAnimatorStateInfo(0).normalizedTime > 1)
         {
+            _resolver.SetCategoryAndLabel(_resolver.GetCategory(), "Talking");
             _animationComponent.SetTrigger("Asking");
             _speakingComponent.Say("Can I get a potion with at least: " +  _desiredAttributes + " and no more than " + _unwantedAttributes + "?");
             _asked = true;
@@ -111,11 +115,13 @@ public class CustomerBehavior : MonoBehaviour
         Destroy(incomingPotion.gameObject);
         if(score >= 0)
         {
+            _resolver.SetCategoryAndLabel(_resolver.GetCategory(), "Positive");
             _animationComponent.SetTrigger("Happy");
             _speakingComponent.Say(MessageTypes.Positive);
         }
         else
         {
+            _resolver.SetCategoryAndLabel(_resolver.GetCategory(), "Negative");
             _animationComponent.SetTrigger("Angry");
             _speakingComponent.Say(MessageTypes.Negative);
         }
