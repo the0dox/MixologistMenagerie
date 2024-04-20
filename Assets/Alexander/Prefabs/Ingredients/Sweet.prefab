@@ -78,7 +78,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8441872588483746691, guid: c362f017d7fd6654abd4a1ee573dc6ab, type: 3}
       propertyPath: m_Name
-      value: AttackIngredient
+      value: Sweet
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

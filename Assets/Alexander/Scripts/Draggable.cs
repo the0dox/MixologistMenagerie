@@ -10,12 +10,14 @@ using UnityEngine.EventSystems;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Draggable : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginDragHandler
 {
+    // public Accessor
+    public bool Dragged => _dragged;
     // the offset between the mouse and the object, if set to zero the object will be perfectly centered when held
     [SerializeField] private Vector2 _offset;
     // reference to the physics of the object
     private Rigidbody2D _body;
     // if set to true, move towards mouse position
-    private bool _dragged;
+    [SerializeField] private bool _dragged;
     // the current mouse position
     private Vector2 _targetPosition;
     // speed at which object travels
@@ -25,7 +27,7 @@ public class Draggable : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginDra
     [SerializeField] private float _returnTime;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         _body = GetComponent<Rigidbody2D>();    
     }
@@ -57,8 +59,7 @@ public class Draggable : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginDra
         _body.simulated = true;
     }
 
-    // called when drag first starts
-    public void OnBeginDrag(PointerEventData eventData)
+    public void OnPickup()
     {
         StopAllCoroutines();
         _dragged = true;
@@ -66,6 +67,12 @@ public class Draggable : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginDra
         _body.totalTorque = 0;
         _body.totalForce = Vector2.zero;
         originalPosition = transform.position;
+    }
+
+    // called when drag first starts
+    public void OnBeginDrag(PointerEventData eventData)
+    {
+        OnPickup();
     }
 
     // called when the object is let go
@@ -100,7 +107,7 @@ public class Draggable : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginDra
     {
         _dragged = true;
         _targetPosition = originalPosition;
-        while(Vector3.Distance(transform.position, originalPosition) > 0.05)
+        while(Vector3.Distance(transform.position, originalPosition) > 0.1)
         {
             yield return new WaitForFixedUpdate();
         }
