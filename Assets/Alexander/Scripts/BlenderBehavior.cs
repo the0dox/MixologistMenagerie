@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class BlenderBehavior : MonoBehaviour
@@ -10,9 +11,15 @@ public class BlenderBehavior : MonoBehaviour
     [SerializeField] private GameObject _potionPrefab;
     [SerializeField] private Transform _depositPoint;
     [SerializeField] private float _radius; 
+    private Animator _animationComponent;
+    private bool _interactable;
+    [SerializeField] private float _blendTime = 2;
+
     void Start()
     {
+        _interactable = true;
         _contents = new IngredientBehavior[SIZE];
+        _animationComponent = GetComponent<Animator>();
         ClearContents();
     }
 
@@ -44,7 +51,7 @@ public class BlenderBehavior : MonoBehaviour
     // called by the incoming object
     public void RecieveObject(Draggable incommingObject)
     {
-        if(incommingObject.CompareTag("Ingredient") && _index < SIZE)
+        if(incommingObject.CompareTag("Ingredient") && _index < SIZE && _interactable)
         {
             incommingObject.enabled = false;
             if(Vector2.Distance(transform.position, incommingObject.transform.position) > _radius)
@@ -67,16 +74,35 @@ public class BlenderBehavior : MonoBehaviour
 
     public void Blend()
     {
-        if(_index > 0)
+        if(_interactable && _index > 0)
         {
-            PotionBehavior potion = Instantiate(_potionPrefab).GetComponent<PotionBehavior>();
-            potion.CombineIngredients(_contents);
-            ClearContents();
-            potion.transform.position = _depositPoint.position;
+            StopAllCoroutines();
+            StartCoroutine(BlendDelay());
         }
         else
         {
             Debug.Log("no contents");
         }
+    }
+
+    IEnumerator BlendDelay()
+    {
+        _interactable = false;
+        float dir = 1;
+        for(float i = 0; i < _blendTime; i += Time.fixedDeltaTime)
+        {
+            _animationComponent.SetFloat("Speed", 6 * dir, 3, Time.fixedDeltaTime);
+            if(i > _blendTime/2)
+            {
+                dir = 0;
+            }
+            yield return new WaitForFixedUpdate();
+        }
+        _animationComponent.SetFloat("Speed", 0);
+        _interactable = true;
+        PotionBehavior potion = Instantiate(_potionPrefab).GetComponent<PotionBehavior>();
+        potion.CombineIngredients(_contents);
+        ClearContents();
+        potion.transform.position = _depositPoint.position;
     }
 }
