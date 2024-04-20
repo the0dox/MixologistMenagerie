@@ -16,7 +16,9 @@ public class BoxBehavior : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginD
     void Awake()
     {
         _icon.sprite = _prefab.GetComponent<SpriteRenderer>().sprite;
+        GetComponent<TooltipTarget>().Tooltip = _prefab.GetComponent<TooltipTarget>().Tooltip;
     }
+
 
     // when an ingredient is pulled back to this box because it was dragged to an invalid point delete it
     void OnTriggerStay2D(Collider2D other)

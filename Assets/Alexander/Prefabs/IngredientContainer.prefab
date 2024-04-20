@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 1139857205
   m_SortingLayer: 2
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: f0e6f258b02a5cc479152e3182354acc, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -81,7 +81,7 @@ SpriteRenderer:
   m_Size: {x: 0.68266666, y: 0.68266666}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &6862742759635636026
@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 5123900822574057952}
   - component: {fileID: 1716593293660547364}
   - component: {fileID: 7886799088865302907}
+  - component: {fileID: 1119122699612827182}
   m_Layer: 0
   m_Name: IngredientContainer
   m_TagString: Untagged
@@ -230,3 +231,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1119122699612827182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6862742759635636026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d29915c5713446b4fae544daba8c982a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <Tooltip>k__BackingField: 

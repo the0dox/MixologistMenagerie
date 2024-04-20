@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Text;
+using Unity.Burst.Intrinsics;
 using UnityEngine;
 
 // bag of stats, designed to be modifiable if we go a different direction
@@ -36,6 +37,35 @@ public struct Attributes
         return output;
     }
 
+
+
+    // this is third one 'Equals'
+    public static bool operator == (Attributes lhs, Attributes rhs)
+    {
+        return lhs.AttackUp == rhs.AttackUp && lhs.Sweetness == rhs.Sweetness && lhs.Bitter == rhs.Bitter && lhs.FireDefense == rhs.FireDefense;
+    }
+    
+    // this is third one 'Equals'
+    public static bool operator != (Attributes lhs, Attributes rhs)
+    {
+        return lhs.AttackUp != rhs.AttackUp && lhs.Sweetness != rhs.Sweetness && lhs.Bitter != rhs.Bitter && lhs.FireDefense != rhs.FireDefense;
+    }
+
+    public override bool Equals(object obj)
+    {
+        if((Attributes)obj != null)
+        {
+            return this == (Attributes)obj;
+        }
+        return base.Equals(obj);
+    }
+
+    public override int GetHashCode()
+    {
+        return base.GetHashCode();
+    }
+
+
     // returns a safe string of thiss structs contents
     public override string ToString()
     {
@@ -46,15 +76,15 @@ public struct Attributes
         }
         if(Sweetness != 0)
         {
-            output.Append("Sweetness: " + Sweetness);
+            output.Append(" Sweetness: " + Sweetness);
         }
         if(Bitter != 0)
         {
-            output.Append("Bitterness: " + Bitter);
+            output.Append(" Bitterness: " + Bitter);
         }
         if(FireDefense != 0)
         {
-            output.Append("Fire Defense: " + FireDefense);
+            output.Append(" Fire Defense: " + FireDefense);
         }
         return output.ToString();
     }

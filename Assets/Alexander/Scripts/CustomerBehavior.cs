@@ -13,7 +13,8 @@ public class CustomerBehavior : MonoBehaviour
     [SerializeField] private GameObject[] _sprites;
     [SerializeField] private Attributes _desiredAttributes;
     [SerializeField] private Attributes _unwantedAttributes;
-    [SerializeField] private Vector3 _textOffset;
+
+    [SerializeField] private Attributes[] _potentialAttributes;
     private bool _asked;
 
     // generate random look on creation
@@ -22,6 +23,17 @@ public class CustomerBehavior : MonoBehaviour
         GameObject visual = Instantiate(_sprites[Random.Range(0, _sprites.Length)], transform);
         _animationComponent = GetComponentInChildren<Animator>();
         _speakingComponent = GetComponentInChildren<SpeakingBehavior>();
+        GeneratePersonality();
+    }
+
+    void GeneratePersonality()
+    {
+        _desiredAttributes = _potentialAttributes[Random.Range(0,_potentialAttributes.Length)];
+        _unwantedAttributes = _potentialAttributes[Random.Range(0,_potentialAttributes.Length)];
+        while(_unwantedAttributes == _desiredAttributes && _potentialAttributes.Length > 1)
+        {   
+            _unwantedAttributes = _potentialAttributes[Random.Range(0,_potentialAttributes.Length)];
+        }
     }
     
     // called by the incoming object

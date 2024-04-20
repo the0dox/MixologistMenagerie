@@ -103,7 +103,23 @@ MonoBehaviour:
     Sweetness: 0
     Bitter: 0
     FireDefense: 0
-  _textOffset: {x: 0, y: 5, z: 0}
+  _potentialAttributes:
+  - AttackUp: 2
+    Sweetness: 0
+    Bitter: 0
+    FireDefense: 0
+  - AttackUp: 0
+    Sweetness: 2
+    Bitter: 0
+    FireDefense: 0
+  - AttackUp: 0
+    Sweetness: 0
+    Bitter: 2
+    FireDefense: 0
+  - AttackUp: 0
+    Sweetness: 0
+    Bitter: 0
+    FireDefense: 2
 --- !u!114 &1418145072639133336
 MonoBehaviour:
   m_ObjectHideFlags: 0

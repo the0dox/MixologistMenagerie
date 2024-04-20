@@ -8,9 +8,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5652850693405140798, guid: c362f017d7fd6654abd4a1ee573dc6ab, type: 3}
+      propertyPath: <Tooltip>k__BackingField
+      value: 'AttackIngredient Attack Up: 3Sweetness: -2'
+      objectReference: {fileID: 0}
     - target: {fileID: 1131672317913398590, guid: c362f017d7fd6654abd4a1ee573dc6ab, type: 3}
       propertyPath: <Stats>k__BackingField.AttackUp
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131672317913398590, guid: c362f017d7fd6654abd4a1ee573dc6ab, type: 3}
+      propertyPath: <Stats>k__BackingField.Sweetness
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 1418078203283129306, guid: c362f017d7fd6654abd4a1ee573dc6ab, type: 3}
       propertyPath: m_LocalPosition.x

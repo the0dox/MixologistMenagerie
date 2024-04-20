@@ -7,5 +7,19 @@ using UnityEngine;
 public class IngredientBehavior : MonoBehaviour
 {
     // currently only contains a bucket of stats
-    [field: SerializeField] public Attributes Stats {get; private set;} 
+    [field: SerializeField] public Attributes Stats {get; private set;}
+    [SerializeField] private TooltipTarget _tooltip;
+
+    public override string ToString()
+    {
+        return name + " " + Stats;
+    }
+
+    public void OnValidate()
+    {
+        if(_tooltip)
+        {
+            _tooltip.Tooltip = ToString();
+        }
+    }
 }
