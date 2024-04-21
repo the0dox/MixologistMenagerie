@@ -91,6 +91,136 @@ MonoBehaviour:
       m_SpriteOverride: {fileID: 21300000, guid: 81f513d212fb7b74baff4b513ce562eb, type: 3}
     m_FromMain: 0
     m_EntryOverrideCount: 4
+  - m_Name: Aten
+    m_Hash: 596964213
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: Neutral
+      m_Hash: 731503724
+      m_Sprite: {fileID: 21300000, guid: 900d10e840451fc45a13691f13341c92, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 900d10e840451fc45a13691f13341c92, type: 3}
+    - m_Name: Talking
+      m_Hash: 370501142
+      m_Sprite: {fileID: 21300000, guid: e7e9a86c10d1f5f4cbe43e02870dd14f, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: e7e9a86c10d1f5f4cbe43e02870dd14f, type: 3}
+    - m_Name: Positive
+      m_Hash: 864613939
+      m_Sprite: {fileID: 21300000, guid: 11c27addb392832419217635376f4641, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 11c27addb392832419217635376f4641, type: 3}
+    - m_Name: Negative
+      m_Hash: 385777960
+      m_Sprite: {fileID: 21300000, guid: e66fdb85d3877b0468420ec28d05b02a, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: e66fdb85d3877b0468420ec28d05b02a, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 4
+  - m_Name: Freya
+    m_Hash: 452175961
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: Neutral
+      m_Hash: 731503724
+      m_Sprite: {fileID: 21300000, guid: f1ce3b48dbe95d742b75e89d75fa7726, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: f1ce3b48dbe95d742b75e89d75fa7726, type: 3}
+    - m_Name: Talking
+      m_Hash: 370501142
+      m_Sprite: {fileID: 21300000, guid: 4ebfe8c604751814e87225a88a5864ce, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 4ebfe8c604751814e87225a88a5864ce, type: 3}
+    - m_Name: Positive
+      m_Hash: 864613939
+      m_Sprite: {fileID: 21300000, guid: 62f5b15a7dee90242993194fbab797c9, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 62f5b15a7dee90242993194fbab797c9, type: 3}
+    - m_Name: Negative
+      m_Hash: 385777960
+      m_Sprite: {fileID: 21300000, guid: a56f3b11b768ee2449c115cde65b6199, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: a56f3b11b768ee2449c115cde65b6199, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 4
+  - m_Name: Luka
+    m_Hash: 503345536
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: Neutral
+      m_Hash: 731503724
+      m_Sprite: {fileID: 21300000, guid: 26103fd8f0d411842a73be21ea8b237d, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 26103fd8f0d411842a73be21ea8b237d, type: 3}
+    - m_Name: Talking
+      m_Hash: 370501142
+      m_Sprite: {fileID: 21300000, guid: f9c74f0f4b9f42a4c87823982d467ba8, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: f9c74f0f4b9f42a4c87823982d467ba8, type: 3}
+    - m_Name: Positive
+      m_Hash: 864613939
+      m_Sprite: {fileID: 21300000, guid: 6a33dfe5b60bd5745b4b17705b28c4ed, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 6a33dfe5b60bd5745b4b17705b28c4ed, type: 3}
+    - m_Name: Negative
+      m_Hash: 385777960
+      m_Sprite: {fileID: 21300000, guid: ae5cc483d0583fb448c2a3bfc8c97ad4, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: ae5cc483d0583fb448c2a3bfc8c97ad4, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 4
+  - m_Name: Tabby
+    m_Hash: 1030410627
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: Neutral
+      m_Hash: 731503724
+      m_Sprite: {fileID: 21300000, guid: ab6ce1db4f3042c4c86ed4797f6fab1f, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: ab6ce1db4f3042c4c86ed4797f6fab1f, type: 3}
+    - m_Name: Talking
+      m_Hash: 370501142
+      m_Sprite: {fileID: 21300000, guid: 64043d44b4a8c6f4588a79c3a1351b36, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 64043d44b4a8c6f4588a79c3a1351b36, type: 3}
+    - m_Name: Positive
+      m_Hash: 864613939
+      m_Sprite: {fileID: 21300000, guid: 6fcd4d2c401d01f4284fc8cd078c0107, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 6fcd4d2c401d01f4284fc8cd078c0107, type: 3}
+    - m_Name: Negative
+      m_Hash: 385777960
+      m_Sprite: {fileID: 21300000, guid: ab6ce1db4f3042c4c86ed4797f6fab1f, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: ab6ce1db4f3042c4c86ed4797f6fab1f, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 4
+  - m_Name: Wirmi
+    m_Hash: 964111463
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: Neutral
+      m_Hash: 731503724
+      m_Sprite: {fileID: 21300000, guid: 8b112760e1443b144ba523431058fa22, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 8b112760e1443b144ba523431058fa22, type: 3}
+    - m_Name: Talking
+      m_Hash: 370501142
+      m_Sprite: {fileID: 21300000, guid: 3b77489d12d3165408cd60fa0cac3abe, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 3b77489d12d3165408cd60fa0cac3abe, type: 3}
+    - m_Name: Positive
+      m_Hash: 864613939
+      m_Sprite: {fileID: 21300000, guid: 042cbec304e64084a966620d0e255cf8, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 042cbec304e64084a966620d0e255cf8, type: 3}
+    - m_Name: Negative
+      m_Hash: 385777960
+      m_Sprite: {fileID: 21300000, guid: 49ffe89813a31ce498772ba90102102d, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 49ffe89813a31ce498772ba90102102d, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 4
   m_PrimaryLibraryGUID: 
-  m_ModificationHash: 638492183208305031
+  m_ModificationHash: 638492892197479924
   m_Version: 1
