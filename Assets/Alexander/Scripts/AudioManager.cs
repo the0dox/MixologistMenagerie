@@ -7,13 +7,11 @@ public class AudioManager : MonoBehaviour
     private Dictionary<SoundKey, AudioClip> _sounds;
     public static AudioManager s_instance;
     [SerializeField] private AudioSource _songSource;
-    [SerializeField] private AudioSource _fadeInSource;
     [SerializeField] private SoundBinding[] _soundInitalizer;
     [SerializeField] private AudioClip _introSong;
     [SerializeField] private AudioClip _mainSong;
     [SerializeField] private AudioClip _fullSong;
     [SerializeField] private float cutOffPercentage = 0.75f;
-    private bool _fade;
 
     // Start is called before the first frame update
     void Awake()
@@ -37,15 +35,18 @@ public class AudioManager : MonoBehaviour
     {
         Debug.Log("playing song" + index);
         s_instance._songSource.volume = 1;
-        s_instance._fadeInSource.volume = 0;
         if(index == 1)
         {
-            s_instance._fade = true;
             s_instance._songSource.clip = s_instance._mainSong;
+        }
+        else if(index == 0)
+        {
+            s_instance._songSource.clip = s_instance._introSong;
         }
         else
         {
-            s_instance._songSource.clip = s_instance._introSong;
+            s_instance._songSource.Stop();
+            return;
         }
         s_instance._songSource.time = 0;
         s_instance._songSource.Play();
@@ -60,25 +61,6 @@ public class AudioManager : MonoBehaviour
         else
         {
             AudioSource.PlayClipAtPoint(s_instance._sounds[key], Vector2.zero, 0.8f);
-        }
-    }
-
-    public void Update()
-    {
-        if(_fade)
-        {
-            float songProgress = _songSource.time/_introSong.length;
-            if(songProgress > cutOffPercentage)
-            {
-                _songSource.volume = Mathf.Lerp(0,1, (songProgress - cutOffPercentage) / 1 - cutOffPercentage);
-                _fadeInSource.volume = Mathf.Lerp(1,0, (songProgress - cutOffPercentage) / 1 - cutOffPercentage);
-            }
-            if(songProgress > 0.99f)
-            {
-                _fadeInSource.volume = 1;
-                _songSource.volume = 0;
-                _fade = false;
-            }
         }
     }
 }
@@ -113,5 +95,9 @@ public enum SoundKey
     MenuHover,
     MenuExit,
     WalkUp,
-    WalkAway
+    WalkAway,
+    CoinCollect1,
+    CoinCollect2,
+    CoinCollectLoop,
+    GameWon,
 }

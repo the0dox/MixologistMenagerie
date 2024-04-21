@@ -136,13 +136,16 @@ public class CustomerBehavior : MonoBehaviour
             _animationComponent.SetTrigger("Angry");
             _speakingComponent.Say(MessageTypes.Negative);
         }
-        ScoreManager.AddGold(score + 10);
-        StartCoroutine(LeaveDelay(3));
+        StartCoroutine(LeaveDelay(3,score + 10));
     }
 
-    IEnumerator LeaveDelay(float seconds)
+
+
+    IEnumerator LeaveDelay(float seconds, int score)
     {
-        yield return new WaitForSeconds(seconds);
+        yield return new WaitForSeconds(seconds/2);
+        ScoreManager.AddGold(score + 10);
+        yield return new WaitForSeconds(seconds/2);
         _animationComponent.SetTrigger("Exit");
         AudioManager.PlaySound(SoundKey.WalkAway, transform.position);
         yield return new WaitForSeconds(1);

@@ -10,6 +10,7 @@ public class UIGoldCounter : MonoBehaviour
     private int _goldTarget;
     [SerializeField] private string _addition;
     private TextMeshProUGUI _text;
+    [SerializeField] private AudioSource _source;
 
     void Start()
     {
@@ -30,6 +31,10 @@ public class UIGoldCounter : MonoBehaviour
         else
         {
             _currentGold = _goldTarget;
+            if(_source)
+            {
+                _source.Stop();
+            }
         }
         _text.text = _addition + " " + _currentGold;
     }

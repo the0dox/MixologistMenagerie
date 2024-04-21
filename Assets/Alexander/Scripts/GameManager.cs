@@ -48,7 +48,9 @@ public class GameManager : MonoBehaviour
 
     public static void WinGame()
     {
+        AudioManager.PlaySong(-1);
         GameActive = false;
+        AudioManager.PlaySound(SoundKey.GameWon, Vector2.zero);
         UIGameOver.TriggerGameOver();
     }
 
