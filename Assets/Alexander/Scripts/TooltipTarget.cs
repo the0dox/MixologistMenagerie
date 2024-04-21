@@ -7,13 +7,14 @@ public class TooltipTarget : MonoBehaviour
 {
     // viewable text sent to the tooltip
     [field: SerializeField, TextArea(1,5)] public string Tooltip {get; set;}
+    [SerializeField] public string displayName;
 
     // enable text when moused over
     public void OnMouseOver()
     {
         if(GameManager.GameActive)
         {
-            UITooltip.SetText(Tooltip);
+            UITooltip.SetText(Tooltip, displayName);
         }
     }
     

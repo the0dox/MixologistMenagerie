@@ -79,17 +79,21 @@ public class BlenderBehavior : MonoBehaviour
 
     public void Blend()
     {
-        if(_interactable && _index > 0)
+        if(_interactable)
         {
-            StopAllCoroutines();
-            StartCoroutine(BlendDelay());
+            if(_index > 0)
+            {
+                StopAllCoroutines();
+                StartCoroutine(BlendDelay());
+            }
+            else
+            {
+                Debug.Log("no contents");
+                AudioManager.PlaySound(SoundKey.DropFailure, transform.position);
+                _animationComponent.SetTrigger("Fail");
+            }
         }
-        else
-        {
-            Debug.Log("no contents");
-            AudioManager.PlaySound(SoundKey.DropFailure, transform.position);
-            _animationComponent.SetTrigger("Fail");
-        }
+        
     }
 
     IEnumerator BlendDelay()

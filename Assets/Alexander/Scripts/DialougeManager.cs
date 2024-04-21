@@ -15,10 +15,18 @@ public class DialougeManager : MonoBehaviour
         s_instance = this;  
     }
 
-    public static SpeechBubbleBehavior CreateText(string text, Vector2 position)
+    public static SpeechBubbleBehavior CreateText(string text, Vector2 position, bool confirmable)
     {
         SpeechBubbleBehavior newText = Instantiate(s_instance._prefab).GetComponent<SpeechBubbleBehavior>();
-        newText.SetText(text);
+        newText.SetText(text, confirmable);
+        newText.transform.position = position;
+        return newText;
+    }
+
+    public static SpeechBubbleBehavior CreateText(string text, Vector2 position, float timer)
+    {
+        SpeechBubbleBehavior newText = Instantiate(s_instance._prefab).GetComponent<SpeechBubbleBehavior>();
+        newText.SetText(text, timer);
         newText.transform.position = position;
         return newText;
     }

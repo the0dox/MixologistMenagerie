@@ -7,28 +7,19 @@ using UnityEngine;
 public class SpeechBubbleBehavior : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI _textComponent;
-    [SerializeField] private bool confirm;
-    [SerializeField] private float _lifeTime; 
+    [SerializeField] private GameObject _confirmablePiece;
 
-    public void Start()
-    {
-        if(_lifeTime > 0)
-        {
-            Invoke("Remove", _lifeTime);
-        }
-    }
-
-    public void SetText(string newMessage)
+    public void SetText(string newMessage, float time)
     {
         _textComponent.text = newMessage;
+        _confirmablePiece.gameObject.SetActive(false);
+        Invoke("Remove", time);
     }
-
-    public void OnMouseDown()
+    
+    public void SetText(string newMessage, bool confirmable = true)
     {
-        if(confirm)
-        {
-            Remove();
-        }
+        _textComponent.text = newMessage;
+        _confirmablePiece.gameObject.SetActive(confirmable);
     }
 
     public void Remove()

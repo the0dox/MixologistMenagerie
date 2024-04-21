@@ -11,6 +11,8 @@ public class UITooltip : MonoBehaviour
     // reference to the ui body of the tooltip
     [SerializeField] private GameObject _tooltipBody;
     // reference to the text of the tooltip
+    [SerializeField] private TextMeshProUGUI _tooltipHeader;
+    // reference to the text of the tooltip
     [SerializeField] private TextMeshProUGUI _tooltipText;
     // only one insyance can exist at a time
     private static UITooltip s_instance;
@@ -32,9 +34,10 @@ public class UITooltip : MonoBehaviour
     }
 
     // sets the text, or hides the text if non is provided
-    public static void SetText(string text)
+    public static void SetText(string text, string header = null)
     {
         s_instance._tooltipBody.SetActive(!string.IsNullOrEmpty(text));
+        s_instance._tooltipHeader.text = header;
         s_instance._tooltipText.text = text;
     }
 }

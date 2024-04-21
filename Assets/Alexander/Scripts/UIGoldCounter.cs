@@ -8,6 +8,7 @@ public class UIGoldCounter : MonoBehaviour
 {
     private int _currentGold;
     private int _goldTarget;
+    [SerializeField] private string _addition;
     private TextMeshProUGUI _text;
 
     void Start()
@@ -30,6 +31,6 @@ public class UIGoldCounter : MonoBehaviour
         {
             _currentGold = _goldTarget;
         }
-        _text.text = "Gold: " + _currentGold;
+        _text.text = _addition + " " + _currentGold;
     }
 }

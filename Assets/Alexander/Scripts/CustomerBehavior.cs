@@ -60,12 +60,15 @@ public class CustomerBehavior : MonoBehaviour
 
     public void Ask()
     {
-        if(!_asked && _animationComponent.GetCurrentAnimatorStateInfo(0).normalizedTime > 1)
+        if(!_asked)
         {
             _resolver.SetCategoryAndLabel(_resolver.GetCategory(), "Talking");
             _animationComponent.SetTrigger("Asking");
-            _speakingComponent.Say("Can I get a potion with at least: " +  _desiredAttributes + " and no more than " + _unwantedAttributes + "?");
-            _asked = true;
+            if(_speakingComponent.Ask())
+            {
+                _asked = true;   
+                _speakingComponent.Say(_desiredAttributes, _unwantedAttributes);
+            }
         }
     }
 

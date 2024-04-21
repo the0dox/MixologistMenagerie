@@ -207,3 +207,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Tooltip>k__BackingField: 
+  displayName: Potion

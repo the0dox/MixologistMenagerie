@@ -34,11 +34,6 @@ public class PotionBehavior : MonoBehaviour
                 Stats += ingredient.Stats;
             }
         }
-        _tooltip.Tooltip = this.ToString();
-    }
-
-    public override string ToString()
-    {
-        return name + " " + Stats;
+        _tooltip.Tooltip = Stats.ToString();
     }
 }

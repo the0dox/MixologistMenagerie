@@ -13,7 +13,10 @@ public class BoxBehavior : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginD
 
     void Awake()
     {
-        GetComponent<TooltipTarget>().Tooltip = _prefab.GetComponent<TooltipTarget>().Tooltip;
+        TooltipTarget myTarget = GetComponent<TooltipTarget>();
+        TooltipTarget prefabTaget = _prefab.GetComponent<TooltipTarget>();
+        myTarget.Tooltip = prefabTaget.Tooltip;
+        myTarget.displayName = prefabTaget.displayName;
     }
 
 

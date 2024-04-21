@@ -6,47 +6,71 @@ using UnityEngine;
 public class SpeakingBehavior : MonoBehaviour
 {
     private SpeechBubbleBehavior _currentSpeech;
-    [SerializeField, TextArea(1,5)] private string _positiveMessage;
-    [SerializeField, TextArea(1,5)] private string _negativeMessage;
     [SerializeField] private SoundKey _voiceType;
     [SerializeField] private Vector3 _offset;
+    [SerializeField] private DialogueTemplate Template;
+    private int TemplateProgress;
+        
 
     public void Say(MessageTypes type)
     {
         switch(type)
         {
             case MessageTypes.Positive:
-                Say(_positiveMessage, SoundKey.Happy);
+                Say(Template.positiveMessage, SoundKey.Happy, 2.5f);
                 break;
             case MessageTypes.Negative:
-                Say(_negativeMessage, SoundKey.Sad);
+                Say(Template.negativeMessage, SoundKey.Sad, 2.5f);
                 break;
             default:
                 Debug.LogWarning("Invalid message type " + type, gameObject);
             break;
         }
     }
-
-    public void Say(string message, SoundKey sound = SoundKey.None)
+    
+    public void Say(string message, SoundKey sound, float time)
     {
         if(_currentSpeech)
         {
             _currentSpeech.Remove();
-        }
-        if(sound == SoundKey.None)
-        {
-            sound = _voiceType;
         }
         AudioManager.PlaySound(sound, transform.position);
-        _currentSpeech = DialougeManager.CreateText(message, transform.position + _offset);
+        _currentSpeech = DialougeManager.CreateText(message, transform.position + _offset, time);
     }
 
-    void OnDestroy()
+    public void Say(string message, bool confirmable = false)
     {
         if(_currentSpeech)
         {
             _currentSpeech.Remove();
         }
+        _currentSpeech = DialougeManager.CreateText(message, transform.position + _offset, confirmable);
+    }
+
+    public void Say(Attributes positiveStats, Attributes negativeStats)
+    {
+        Say(Template.customRequest + " a potion with at least: " +  positiveStats + " and no more than " + negativeStats + "?");
+    }
+
+    public bool Ask()
+    {
+        if(TemplateProgress < Template.dialogue.Length)
+        {
+            if(TemplateProgress == 0)
+            {
+                AudioManager.PlaySound(_voiceType, transform.position);
+            }
+            else
+            {
+                AudioManager.PlaySound(SoundKey.MenuHover, transform.position);
+            }
+
+            Say(Template.dialogue[TemplateProgress], true);
+            TemplateProgress++;
+            return false;
+        }
+        AudioManager.PlaySound(SoundKey.MenuConfirm, transform.position);
+        return true;
     }
 }
 
