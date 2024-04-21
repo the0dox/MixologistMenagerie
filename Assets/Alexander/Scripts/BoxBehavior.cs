@@ -30,6 +30,7 @@ public class BoxBehavior : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginD
     // create an instance and begin dragging it
     public void OnBeginDrag(PointerEventData eventData)
     {
+        DialougeManager.CreateExplosion(transform.position);
         _active = Instantiate(_prefab).GetComponent<Draggable>();
         _active.transform.position = transform.position;
         _active.OnBeginDrag(eventData);

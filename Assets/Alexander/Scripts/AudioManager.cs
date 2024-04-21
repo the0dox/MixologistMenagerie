@@ -7,17 +7,48 @@ public class AudioManager : MonoBehaviour
     private Dictionary<SoundKey, AudioClip> _sounds;
     public static AudioManager s_instance;
     [SerializeField] private AudioSource _songSource;
+    [SerializeField] private AudioSource _fadeInSource;
     [SerializeField] private SoundBinding[] _soundInitalizer;
+    [SerializeField] private AudioClip _introSong;
+    [SerializeField] private AudioClip _mainSong;
+    [SerializeField] private AudioClip _fullSong;
+    [SerializeField] private float cutOffPercentage = 0.75f;
+    private bool _fade;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        s_instance = this;
-        _sounds = new Dictionary<SoundKey, AudioClip>();
-        foreach(SoundBinding binding in _soundInitalizer)
+        if(s_instance == null)
         {
-            _sounds.Add(binding.key, binding.clip);
+            s_instance = this;
+            _sounds = new Dictionary<SoundKey, AudioClip>();
+            foreach(SoundBinding binding in _soundInitalizer)
+            {
+                _sounds.Add(binding.key, binding.clip);
+            }
         }
+        else
+        {
+            gameObject.SetActive(false);
+        }
+    }
+
+    public static void PlaySong(int index)
+    {
+        Debug.Log("playing song" + index);
+        s_instance._songSource.volume = 1;
+        s_instance._fadeInSource.volume = 0;
+        if(index == 1)
+        {
+            s_instance._fade = true;
+            s_instance._songSource.clip = s_instance._mainSong;
+        }
+        else
+        {
+            s_instance._songSource.clip = s_instance._introSong;
+        }
+        s_instance._songSource.time = 0;
+        s_instance._songSource.Play();
     }
 
     public static void PlaySound(SoundKey key, Vector2 position)
@@ -28,7 +59,26 @@ public class AudioManager : MonoBehaviour
         }
         else
         {
-            AudioSource.PlayClipAtPoint(s_instance._sounds[key], Camera.main.transform.position, 0.8f);
+            AudioSource.PlayClipAtPoint(s_instance._sounds[key], Vector2.zero, 0.8f);
+        }
+    }
+
+    public void Update()
+    {
+        if(_fade)
+        {
+            float songProgress = _songSource.time/_introSong.length;
+            if(songProgress > cutOffPercentage)
+            {
+                _songSource.volume = Mathf.Lerp(0,1, (songProgress - cutOffPercentage) / 1 - cutOffPercentage);
+                _fadeInSource.volume = Mathf.Lerp(1,0, (songProgress - cutOffPercentage) / 1 - cutOffPercentage);
+            }
+            if(songProgress > 0.99f)
+            {
+                _fadeInSource.volume = 1;
+                _songSource.volume = 0;
+                _fade = false;
+            }
         }
     }
 }
@@ -58,5 +108,10 @@ public enum SoundKey
     TalkC,
     TalkD,
     PotionReady1,
-    PotionReady2
+    PotionReady2,
+    MenuConfirm,
+    MenuHover,
+    MenuExit,
+    WalkUp,
+    WalkAway
 }

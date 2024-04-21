@@ -26,6 +26,7 @@ public class CustomerBehavior : MonoBehaviour
         _animationComponent = GetComponentInChildren<Animator>();
         _speakingComponent = GetComponentInChildren<SpeakingBehavior>();
         _resolver = GetComponentInChildren<SpriteResolver>();
+        AudioManager.PlaySound(SoundKey.WalkUp, transform.position);
         GeneratePersonality();
     }
 
@@ -112,6 +113,7 @@ public class CustomerBehavior : MonoBehaviour
             score -= preferenceDiff.FireDefense;
         }
         Debug.Log("score: " + score);
+        DialougeManager.CreateExplosion(incomingPotion.transform.position);
         Destroy(incomingPotion.gameObject);
         if(score >= 0)
         {
@@ -135,6 +137,7 @@ public class CustomerBehavior : MonoBehaviour
     {
         yield return new WaitForSeconds(seconds);
         _animationComponent.SetTrigger("Exit");
+        AudioManager.PlaySound(SoundKey.WalkAway, transform.position);
         yield return new WaitForSeconds(1);
         Destroy(gameObject);
     }

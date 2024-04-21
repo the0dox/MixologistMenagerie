@@ -109,5 +109,6 @@ public class BlenderBehavior : MonoBehaviour
         potion.CombineIngredients(_contents);
         ClearContents();
         potion.transform.position = _depositPoint.position;
+        DialougeManager.CreateExplosion(potion.transform.position);
     }
 }

@@ -8,6 +8,7 @@ public class DialougeManager : MonoBehaviour
 {
     private static DialougeManager s_instance;
     [SerializeField] private GameObject _prefab;
+    [SerializeField] private GameObject _explosionPrefab;
 
     public void Awake()
     {
@@ -20,5 +21,11 @@ public class DialougeManager : MonoBehaviour
         newText.SetText(text);
         newText.transform.position = position;
         return newText;
+    }
+
+    public static void CreateExplosion(Vector2 position)
+    {
+        GameObject newFXs = Instantiate(s_instance._explosionPrefab);
+        newFXs.transform.position = position;
     }
 }
