@@ -97,6 +97,7 @@ GameObject:
   - component: {fileID: 1716593293660547364}
   - component: {fileID: 7886799088865302907}
   - component: {fileID: 1119122699612827182}
+  - component: {fileID: 6626536617766683978}
   m_Layer: 0
   m_Name: IngredientContainer
   m_TagString: Untagged
@@ -243,3 +244,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Tooltip>k__BackingField: 
+  displayName: 
+--- !u!114 &6626536617766683978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6862742759635636026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee4f468c6c432fc428493406db23484e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _recievedObject:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1716593293660547364}
+        m_TargetAssemblyTypeName: BoxBehavior, Assembly-CSharp
+        m_MethodName: RecieveObject
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

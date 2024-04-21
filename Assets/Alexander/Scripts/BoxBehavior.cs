@@ -30,6 +30,21 @@ public class BoxBehavior : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginD
         }
     }
 
+    // called by the incoming object
+    public void RecieveObject(Draggable incommingObject)
+    {
+        if(incommingObject.CompareTag("Ingredient"))
+        {
+            AudioManager.PlaySound(SoundKey.DropSuccessful, transform.position);
+            DialougeManager.CreateExplosion(incommingObject.transform.position);
+            Destroy(incommingObject.gameObject);
+        }
+        else
+        {
+            incommingObject.Return();
+        }
+    }
+
     // create an instance and begin dragging it
     public void OnBeginDrag(PointerEventData eventData)
     {
