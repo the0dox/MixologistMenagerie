@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] private AudioManager _audio;
     public static GameManager Instance {get; private set;}
+    public static bool GameActive {get; private set;}
 
     // Start is called before the first frame update
     void Awake()
@@ -27,12 +28,14 @@ public class GameManager : MonoBehaviour
     {
         AudioManager.PlaySound(SoundKey.MenuConfirm, Vector2.zero);
         AsyncOperation loadScene = SceneManager.LoadSceneAsync(1);
+        GameActive = true;
     } 
 
     public static void MainMenu()
     {
         AudioManager.PlaySound(SoundKey.MenuExit, Vector2.zero);
         AsyncOperation loadScene = SceneManager.LoadSceneAsync(0);
+        GameActive = false;
     }
 
 
@@ -40,11 +43,13 @@ public class GameManager : MonoBehaviour
     {
         AudioManager.PlaySound(SoundKey.MenuConfirm, Vector2.zero);
         AsyncOperation loadScene = SceneManager.LoadSceneAsync(2);
+        GameActive = false;
     }
 
     public static void WinGame()
     {
-
+        GameActive = false;
+        UIGameOver.TriggerGameOver();
     }
 
     public static void EndGame()
@@ -56,5 +61,6 @@ public class GameManager : MonoBehaviour
     public void OnSceneLoad(Scene loadedScene, LoadSceneMode mode)
     {
         AudioManager.PlaySong(loadedScene.buildIndex);
+        GameActive = loadedScene.buildIndex == 1;
     }
 }

@@ -32,7 +32,7 @@ public class UIPauseMenu : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Escape))
         {
-            if(Paused)
+            if(Paused || !GameManager.GameActive)
             {
                 UnPause();
             }

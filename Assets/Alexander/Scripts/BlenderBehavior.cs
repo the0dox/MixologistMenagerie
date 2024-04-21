@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class BlenderBehavior : MonoBehaviour
 {
-    private const int SIZE = 10;
+    private const int SIZE = 5;
     private IngredientBehavior[] _contents;
     private int _index;
     [SerializeField] private GameObject _potionPrefab;
@@ -59,7 +59,7 @@ public class BlenderBehavior : MonoBehaviour
             incommingObject.enabled = false;
             if(Vector2.Distance(transform.position, incommingObject.transform.position) > _radius)
             {
-                incommingObject.transform.position += (transform.position - incommingObject.transform.position).normalized * _radius / 2;
+                incommingObject.transform.position = transform.position + (incommingObject.transform.position - transform.position ).normalized * _radius / 2;
             }
             AddIngredient(incommingObject.GetComponent<IngredientBehavior>());
         }
@@ -71,7 +71,10 @@ public class BlenderBehavior : MonoBehaviour
 
     public void OnMouseDown()
     {
-        Blend();
+        if(GameManager.GameActive)
+        {
+            Blend();
+        }
     }
 
     public void Blend()

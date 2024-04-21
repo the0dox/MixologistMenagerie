@@ -47,5 +47,18 @@ public class CustomerQueue : MonoBehaviour
                 }
             }
         }
+        else
+        {
+            for(int i = 0; i < _nodes.Length; i++)
+            {
+                if(!_nodes[i].Available)
+                {
+                    return;
+                }
+            }
+            Debug.Log("all customers satsified");
+            GameManager.WinGame();
+            StopAllCoroutines();
+        }
     }
 }

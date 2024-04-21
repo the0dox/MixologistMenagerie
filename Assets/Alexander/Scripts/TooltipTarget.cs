@@ -11,7 +11,10 @@ public class TooltipTarget : MonoBehaviour
     // enable text when moused over
     public void OnMouseOver()
     {
-        UITooltip.SetText(Tooltip);
+        if(GameManager.GameActive)
+        {
+            UITooltip.SetText(Tooltip);
+        }
     }
     
     // close text when moused off
