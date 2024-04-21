@@ -22,12 +22,16 @@ public class CustomerBehavior : MonoBehaviour
     // generate random look on creation
     public void Awake()
     {
-        GameObject visual = Instantiate(_sprites[Random.Range(0, _sprites.Length)], transform);
+        // create a random character if I have one
+        if(_sprites.Length > 0)
+        {
+            GameObject visual = Instantiate(_sprites[Random.Range(0, _sprites.Length)], transform);
+            GeneratePersonality();
+        }
         _animationComponent = GetComponentInChildren<Animator>();
         _speakingComponent = GetComponentInChildren<SpeakingBehavior>();
         _resolver = GetComponentInChildren<SpriteResolver>();
         AudioManager.PlaySound(SoundKey.WalkUp, transform.position);
-        GeneratePersonality();
     }
 
     void GeneratePersonality()

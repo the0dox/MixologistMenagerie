@@ -115,7 +115,7 @@ public class BlenderBehavior : MonoBehaviour
         PotionBehavior potion = Instantiate(_potionPrefab).GetComponent<PotionBehavior>();
         potion.CombineIngredients(_contents);
         ClearContents();
-        potion.transform.position = _depositPoint.position;
+        potion.transform.position = _depositPoint.position + (Vector3)(Vector2.right * Random.Range(-2,2));
         DialougeManager.CreateExplosion(potion.transform.position);
     }
 }
