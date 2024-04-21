@@ -7,10 +7,12 @@ public class PotionBehavior : MonoBehaviour
 {
     // potions contain a bucket of stats from the ingredients its made out of
     [field: SerializeField] public Attributes Stats {get; private set;} 
+    [SerializeField] private Sprite[] _variants;
     private TooltipTarget _tooltip;
 
     private void Awake()
     {
+        GetComponent<SpriteRenderer>().sprite = _variants[Random.Range(0, _variants.Length)];
         _tooltip = GetComponent<TooltipTarget>();
         if(Random.Range(0,2) < 1)
         {

@@ -14,19 +14,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -5652850693405140798, guid: c362f017d7fd6654abd4a1ee573dc6ab, type: 3}
       propertyPath: <Tooltip>k__BackingField
-      value: ' Sweetness: 2 Fire Defense: -2'
+      value: 'Attack Up: -4 Sweetness: 4'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131672317913398590, guid: c362f017d7fd6654abd4a1ee573dc6ab, type: 3}
+      propertyPath: <Stats>k__BackingField.Speed
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1131672317913398590, guid: c362f017d7fd6654abd4a1ee573dc6ab, type: 3}
       propertyPath: <Stats>k__BackingField.Bitter
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1131672317913398590, guid: c362f017d7fd6654abd4a1ee573dc6ab, type: 3}
+      propertyPath: <Stats>k__BackingField.AttackUp
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131672317913398590, guid: c362f017d7fd6654abd4a1ee573dc6ab, type: 3}
       propertyPath: <Stats>k__BackingField.Sweetness
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1131672317913398590, guid: c362f017d7fd6654abd4a1ee573dc6ab, type: 3}
       propertyPath: <Stats>k__BackingField.FireDefense
-      value: -2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1418078203283129306, guid: c362f017d7fd6654abd4a1ee573dc6ab, type: 3}
       propertyPath: m_LocalPosition.x

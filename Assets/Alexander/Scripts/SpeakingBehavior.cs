@@ -8,9 +8,24 @@ public class SpeakingBehavior : MonoBehaviour
     private SpeechBubbleBehavior _currentSpeech;
     [SerializeField] private SoundKey _voiceType;
     [SerializeField] private Vector3 _offset;
-    [SerializeField] private DialogueTemplate Template;
+    [SerializeField] public DialogueTemplate Template;
     private int TemplateProgress;
         
+    void Awake()
+    {
+        if(Template.Tutroial)
+        {
+            CustomerManager.Tutorial = true;
+        }
+    }
+
+    public void OnDestroy()
+    {
+        if(Template.Tutroial)
+        {
+            CustomerManager.Tutorial = false;
+        }
+    }
 
     public void Say(MessageTypes type)
     {

@@ -175,9 +175,9 @@ MonoBehaviour:
     m_OverrideEntries:
     - m_Name: Neutral
       m_Hash: 731503724
-      m_Sprite: {fileID: 21300000, guid: ab6ce1db4f3042c4c86ed4797f6fab1f, type: 3}
+      m_Sprite: {fileID: 21300000, guid: d0e4fadad150e654eaa6e097912869d6, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: 21300000, guid: ab6ce1db4f3042c4c86ed4797f6fab1f, type: 3}
+      m_SpriteOverride: {fileID: 21300000, guid: d0e4fadad150e654eaa6e097912869d6, type: 3}
     - m_Name: Talking
       m_Hash: 370501142
       m_Sprite: {fileID: 21300000, guid: 64043d44b4a8c6f4588a79c3a1351b36, type: 3}
@@ -222,5 +222,5 @@ MonoBehaviour:
     m_FromMain: 0
     m_EntryOverrideCount: 4
   m_PrimaryLibraryGUID: 
-  m_ModificationHash: 638492892197479924
+  m_ModificationHash: 638493006056495389
   m_Version: 1

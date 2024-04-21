@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6712441881039403038}
   - component: {fileID: 1084070163496672280}
   - component: {fileID: 54761106878730202}
+  - component: {fileID: 394952976123399748}
   m_Layer: 3
   m_Name: BaseCharacter
   m_TagString: Untagged
@@ -122,10 +123,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73abb51df7a1c07478d4666fac1bd2ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _positiveMessage: This is perfect thanks!
-  _negativeMessage: Oh..... This isn't what I wanted
   _voiceType: 11
   _offset: {x: 2.5, y: 6, z: 0}
+  Template: {fileID: 0}
 --- !u!114 &1084070163496672280
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,6 +156,28 @@ MonoBehaviour:
   m_labelHash: 1.0932483e-12
   m_SpriteKey: 0
   m_SpriteHash: 76575612
+--- !u!114 &394952976123399748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2549285875593937868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e13ce367ad0c23548986fec4732b3868, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  perfered:
+    AttackUp: 0
+    Sweetness: 0
+    Bitter: 0
+    FireDefense: 0
+  disliked:
+    AttackUp: 0
+    Sweetness: 0
+    Bitter: 0
+    FireDefense: 0
 --- !u!1 &6511461806475144379
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7a4faa6ae238654799194bef58edc33, type: 3}
+  m_Name: Tutorial
+  m_EditorClassIdentifier: 
+  dialogue:
+  - What? Oh my.
+  - You were placed here without any experience? Just an intern?
+  - Hey! It's okay! I have a few alchemist friends so I can help!
+  - Let me see...To your left and right you will find your ingredient baskets.
+  - From the look of these...fruits? Vegetables? They all look like they have different
+    effects!
+  - 'You don''t know what they are? You can hover over the baskets to view each effect
+    and taste! '
+  - Hm? What is this glass container with blades? Oh! Silly me!
+  - 'It seems your shop is made to order. When a customer shows up, they will request
+    certain effects and tastes. '
+  - After talking to the customer. Drag the correct ingredients from the shelves
+    and into the blender. Then hit blend!
+  - 'Here try practicing on me! I have an order ready! '
+  positiveMessage: Good work! best of luck on your first day
+  negativeMessage: Oh that's not quite right, lets try again
+  customRequest: Could I get
+  Tutroial: 1

@@ -14,19 +14,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -5652850693405140798, guid: c362f017d7fd6654abd4a1ee573dc6ab, type: 3}
       propertyPath: <Tooltip>k__BackingField
-      value: ' Sweetness: 2 Fire Defense: -2'
+      value: 'Attack Up: -1 Sweetness: 3 Fire Defense: -1 Speed: -1'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131672317913398590, guid: c362f017d7fd6654abd4a1ee573dc6ab, type: 3}
+      propertyPath: <Stats>k__BackingField.Speed
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 1131672317913398590, guid: c362f017d7fd6654abd4a1ee573dc6ab, type: 3}
       propertyPath: <Stats>k__BackingField.Bitter
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1131672317913398590, guid: c362f017d7fd6654abd4a1ee573dc6ab, type: 3}
+      propertyPath: <Stats>k__BackingField.AttackUp
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131672317913398590, guid: c362f017d7fd6654abd4a1ee573dc6ab, type: 3}
+      propertyPath: <Stats>k__BackingField.Saltiness
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131672317913398590, guid: c362f017d7fd6654abd4a1ee573dc6ab, type: 3}
       propertyPath: <Stats>k__BackingField.Sweetness
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1131672317913398590, guid: c362f017d7fd6654abd4a1ee573dc6ab, type: 3}
       propertyPath: <Stats>k__BackingField.FireDefense
-      value: -2
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 1418078203283129306, guid: c362f017d7fd6654abd4a1ee573dc6ab, type: 3}
       propertyPath: m_LocalPosition.x
@@ -86,7 +98,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8441872588483746691, guid: c362f017d7fd6654abd4a1ee573dc6ab, type: 3}
       propertyPath: m_Name
-      value: Sweet 1
+      value: Fey
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

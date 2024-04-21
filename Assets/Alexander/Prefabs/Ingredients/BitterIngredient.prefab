@@ -14,14 +14,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -5652850693405140798, guid: c362f017d7fd6654abd4a1ee573dc6ab, type: 3}
       propertyPath: <Tooltip>k__BackingField
-      value: 'Attack Up: -2 Bitterness: 4'
+      value: 'Attack Up: -2 Saltiness: -2 Speed: 4'
       objectReference: {fileID: 0}
     - target: {fileID: 1131672317913398590, guid: c362f017d7fd6654abd4a1ee573dc6ab, type: 3}
-      propertyPath: <Stats>k__BackingField.Bitter
+      propertyPath: <Stats>k__BackingField.Speed
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1131672317913398590, guid: c362f017d7fd6654abd4a1ee573dc6ab, type: 3}
+      propertyPath: <Stats>k__BackingField.Bitter
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131672317913398590, guid: c362f017d7fd6654abd4a1ee573dc6ab, type: 3}
       propertyPath: <Stats>k__BackingField.AttackUp
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131672317913398590, guid: c362f017d7fd6654abd4a1ee573dc6ab, type: 3}
+      propertyPath: <Stats>k__BackingField.Saltiness
       value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 1418078203283129306, guid: c362f017d7fd6654abd4a1ee573dc6ab, type: 3}

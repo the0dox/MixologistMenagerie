@@ -9,4 +9,5 @@ public class DialogueTemplate : ScriptableObject
     [SerializeField, TextArea(1,5)] public string positiveMessage;
     [SerializeField, TextArea(1,5)] public string negativeMessage;
     [SerializeField, TextArea(1,5)] public string customRequest;
+    public bool Tutroial;
 }

@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7a4faa6ae238654799194bef58edc33, type: 3}
+  m_Name: Inti
+  m_EditorClassIdentifier: 
+  dialogue:
+  - "Well, this is an interesting place indeed\u2026"
+  - Hello. Are you the owner of this shop?
+  - "Many weary travelers stumble upon my shrine, scared, exhausted, alone\u2026"
+  - And yet, just a few days ago, one recovered before me as if a miracle was brought
+    upon him.
+  - I'm not foolish. I can conjure up wonders, yes, but none to such extent.
+  - What he did was drink a concoction fabricated by your hands.
+  - The label. "Spelltacular Smoothies Menagerie". Clear as a sunny day.
+  - Hmm? How do I know this? My, has humanity forsaken the essential ability to read?
+  - But no matter. I would like an offering of one of your concoctions, if you may.
+  - 'I seek no banal things such as strength or agility. '
+  - Rather, what I wish for is new experiences. Yes, the true liberation of a wise
+    soul.
+  - 'I have never tried something sweet yet salty, if you would be so kind. I do
+    hate sour flavors. '
+  positiveMessage: I offer you my gratitude. May the sun shine brightly for you,
+    always.
+  negativeMessage: Was I mistaken? Is this not the wonderful menagerie I envisioned?
+  customRequest: 
+  Tutroial: 0

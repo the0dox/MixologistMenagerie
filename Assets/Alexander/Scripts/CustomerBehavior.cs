@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.U2D.Animation;
 
@@ -9,7 +10,7 @@ public class CustomerBehavior : MonoBehaviour
 {
     // reference to the animator attached to this charater
     private Animator _animationComponent;
-    private SpeakingBehavior _speakingComponent;
+    public SpeakingBehavior _speakingComponent;
     // library of potential looks
     [SerializeField] private GameObject[] _sprites;
     [SerializeField] private Attributes _desiredAttributes;
@@ -30,6 +31,9 @@ public class CustomerBehavior : MonoBehaviour
         }
         _animationComponent = GetComponentInChildren<Animator>();
         _speakingComponent = GetComponentInChildren<SpeakingBehavior>();
+        Preference current = GetComponentInChildren<Preference>();
+        _desiredAttributes = current.perfered;
+        _unwantedAttributes = current.disliked;
         _resolver = GetComponentInChildren<SpriteResolver>();
         AudioManager.PlaySound(SoundKey.WalkUp, transform.position);
     }
@@ -135,11 +139,23 @@ public class CustomerBehavior : MonoBehaviour
             AudioManager.PlaySound(SoundKey.Sad, transform.position);
             _animationComponent.SetTrigger("Angry");
             _speakingComponent.Say(MessageTypes.Negative);
+            if(_speakingComponent.Template.Tutroial)
+            {
+                Invoke("Reask", 2f);
+                return;
+            }
         }
-        StartCoroutine(LeaveDelay(3,score + 10));
+        {
+            StartCoroutine(LeaveDelay(3, Mathf.Clamp(score + 15, 5, 100)));
+        }
     }
 
-
+    public void Reask()
+    {
+        _resolver.SetCategoryAndLabel(_resolver.GetCategory(), "Talking");
+        _animationComponent.SetTrigger("Asking");
+        _speakingComponent.Say(_desiredAttributes, _unwantedAttributes);
+    }
 
     IEnumerator LeaveDelay(float seconds, int score)
     {

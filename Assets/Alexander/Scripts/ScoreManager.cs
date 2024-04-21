@@ -24,7 +24,7 @@ public class ScoreManager : MonoBehaviour
     // adds gold
     public static void AddGold(int value)
     {
-        if(value > 10)
+        if(value > 20)
         {
             AudioManager.PlaySound(SoundKey.CoinCollect2, Vector2.zero);
         }

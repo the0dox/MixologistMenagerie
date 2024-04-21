@@ -14,9 +14,10 @@ public class CustomerManager : MonoBehaviour
     // reference to the positions on the screen customers can fill
     [SerializeField] private CustomerNode[] _nodes;
     // remaining customers that need to be served
-    private int _customerIndex; 
+    [SerializeField] private int _customerIndex; 
     // ammount of time between customers entering
     [SerializeField] private float intervalCheck = 10; 
+    public static bool Tutorial;
 
     // called before first frame
     void Start()
@@ -37,36 +38,39 @@ public class CustomerManager : MonoBehaviour
     // checks to see if any slots are available and attempts to add a customer to that slot
     void CustomerCheck()
     {
-        if(_customerIndex < _characters.Length)
+        if(!Tutorial)
         {
-            for(int i = 0; i < _nodes.Length; i++)
+            if(_customerIndex < _characters.Length)
             {
-                if(_nodes[i].Available)
+                for(int i = 0; i < _nodes.Length; i++)
                 {
-                    GameObject currentCharacter = _characters[i];
-                    CustomerBehavior newCustomer = Instantiate(_customerPrefab).GetComponent<CustomerBehavior>();
-                    currentCharacter.transform.SetParent(newCustomer.transform, false);
-                    currentCharacter.transform.localPosition = Vector3.zero;    
-                    currentCharacter.SetActive(true);
-                    newCustomer.gameObject.SetActive(true);
-                    _nodes[i].AddCustomer(newCustomer);
-                    _customerIndex++;
-                    return;
+                    if(_nodes[i].Available)
+                    {
+                        GameObject currentCharacter = Instantiate(_characters[_customerIndex]);
+                        CustomerBehavior newCustomer = Instantiate(_customerPrefab).GetComponent<CustomerBehavior>();
+                        currentCharacter.transform.SetParent(newCustomer.transform, false);
+                        currentCharacter.transform.localPosition = Vector3.zero;    
+                        currentCharacter.SetActive(true);
+                        newCustomer.gameObject.SetActive(true);
+                        _nodes[i].AddCustomer(newCustomer);
+                        _customerIndex++;
+                        return;
+                    }
                 }
             }
-        }
-        else
-        {
-            for(int i = 0; i < _nodes.Length; i++)
+            else
             {
-                if(!_nodes[i].Available)
+                for(int i = 0; i < _nodes.Length; i++)
                 {
-                    return;
+                    if(!_nodes[i].Available)
+                    {
+                        return;
+                    }
                 }
+                Debug.Log("all customers satsified");
+                GameManager.WinGame();
+                StopAllCoroutines();
             }
-            Debug.Log("all customers satsified");
-            GameManager.WinGame();
-            StopAllCoroutines();
         }
     }
 }

@@ -13,6 +13,8 @@ public struct Attributes
     public int Sweetness;
     public int Bitter;
     public int FireDefense;
+    public int Saltiness;
+    public int Speed;
 
     // allows attributes to be combined with the + opertator
     public static Attributes operator + (Attributes lhs, Attributes rhs)
@@ -22,6 +24,8 @@ public struct Attributes
         output.Sweetness = lhs.Sweetness + rhs.Sweetness;
         output.Bitter = lhs.Bitter + rhs.Bitter;
         output.FireDefense = lhs.FireDefense + rhs.FireDefense;
+        output.Saltiness = lhs.Saltiness + rhs.Saltiness;
+        output.Speed = lhs.Speed = rhs.Speed;
         return output;
     }
 
@@ -34,6 +38,8 @@ public struct Attributes
         output.Sweetness = lhs.Sweetness - rhs.Sweetness;
         output.Bitter = lhs.Bitter - rhs.Bitter;
         output.FireDefense = lhs.FireDefense - rhs.FireDefense;
+        output.Speed = lhs.Saltiness - rhs.Saltiness;
+        output.Speed =lhs.Speed - rhs.Speed;
         return output;
     }
 
@@ -42,13 +48,13 @@ public struct Attributes
     // this is third one 'Equals'
     public static bool operator == (Attributes lhs, Attributes rhs)
     {
-        return lhs.AttackUp == rhs.AttackUp && lhs.Sweetness == rhs.Sweetness && lhs.Bitter == rhs.Bitter && lhs.FireDefense == rhs.FireDefense;
+        return lhs.AttackUp == rhs.AttackUp && lhs.Sweetness == rhs.Sweetness && lhs.Bitter == rhs.Bitter && lhs.FireDefense == rhs.FireDefense && lhs.Saltiness == rhs.Saltiness && lhs.Speed == rhs.Speed;
     }
     
     // this is third one 'Equals'
     public static bool operator != (Attributes lhs, Attributes rhs)
     {
-        return lhs.AttackUp != rhs.AttackUp && lhs.Sweetness != rhs.Sweetness && lhs.Bitter != rhs.Bitter && lhs.FireDefense != rhs.FireDefense;
+        return lhs.AttackUp != rhs.AttackUp && lhs.Sweetness != rhs.Sweetness && lhs.Bitter != rhs.Bitter && lhs.FireDefense != rhs.FireDefense && lhs.Saltiness != rhs.Saltiness && lhs.Speed != rhs.Speed;
     }
 
     public override bool Equals(object obj)
@@ -85,6 +91,14 @@ public struct Attributes
         if(FireDefense != 0)
         {
             output.Append(" Fire Defense: " + FireDefense);
+        }
+        if(Saltiness != 0)
+        {
+            output.Append(" Saltiness: " + Saltiness);
+        }
+        if(Speed != 0)
+        {
+            output.Append(" Speed: " + Speed);
         }
         return output.ToString();
     }

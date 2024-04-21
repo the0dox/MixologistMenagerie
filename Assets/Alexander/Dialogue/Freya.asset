@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7a4faa6ae238654799194bef58edc33, type: 3}
+  m_Name: Freya
+  m_EditorClassIdentifier: 
+  dialogue:
+  - Hmmm do I want something sweet? Or will Winnie prefer something else?
+  - Maybe Uthal will want something salty... Vargas probably won't mind whatever
+    we settle on.
+  - Oh sorry I can't figure out what I want!
+  - ' Uh uh can I get something to help my group not get burned?'
+  - We're about to fight a dragon!
+  - 'I don''t really care what flavor it is, just nothing too bitter please!
+
+'
+  positiveMessage: Ah you're the best! I can't wait to show my friends!
+  negativeMessage: Oooo.. Is that really what I asked for?
+  customRequest: 'To fight that dragon, I''d like
+
+'
+  Tutroial: 0

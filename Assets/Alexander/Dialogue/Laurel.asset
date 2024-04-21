@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7a4faa6ae238654799194bef58edc33, type: 3}
+  m_Name: Laurel
+  m_EditorClassIdentifier: 
+  dialogue:
+  - (clears throat) Excuse me, is this where I can find refreshments?
+  - I was told I could find various smoothies to help me out on my journeys to find
+    more plants for my shop.
+  - I'm looking for something to make me hardier, so I can carry more supplies back
+    to my shop!
+  - I do love a good salty flavor.. do you have something like that?
+  positiveMessage: Exactly as detailed. You're quite good at your job.
+  negativeMessage: Is this for another customer? That isn't my drink.
+  customRequest: 
+  Tutroial: 0
