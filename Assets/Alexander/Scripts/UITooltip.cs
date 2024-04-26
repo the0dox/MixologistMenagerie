@@ -50,9 +50,10 @@ public class UITooltip : MonoBehaviour
 
             float pivotX = 0;
             float pivotY = 1;
-            float RightX = (_canvas.rect.width/2 - _tooltipBody.rect.width) * _canvas.localScale.x;
-            float BottomY = -((_canvas.rect.height/2 - _tooltipBody.rect.height) * _canvas.localScale.y);
-            if(mousepos.x > RightX)
+            float RightX = (_tooltipBody.sizeDelta.x * _canvas.lossyScale.x) + mousepos.x;
+            float BottomY = -((_canvas.sizeDelta.y/2 - _tooltipBody.sizeDelta.y) * _canvas.lossyScale.y);
+            Debug.Log("mouse pos " + mousepos.y + "| y bound: " + BottomY + " | diff" + (BottomY - mousepos.y));// +"| % over" + percentageOver + "| displace?:" + (percentageOver > 0));
+            if(RightX > _canvas.lossyScale.x)
             {
                 pivotX = 1;
             }
