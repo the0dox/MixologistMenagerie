@@ -1667,7 +1667,7 @@ Transform:
   m_GameObject: {fileID: 544962101}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.89, y: -4.07, z: 0}
+  m_LocalPosition: {x: -11.89, y: -5.21, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2886,7 +2886,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 200}
+  m_SizeDelta: {x: 225, y: 225}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &797687968
 MonoBehaviour:
@@ -3159,12 +3159,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25
+  m_fontSize: 22
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 5
-  m_fontSizeMax: 25
+  m_fontSizeMax: 22
   m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
@@ -3175,7 +3175,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
@@ -3187,7 +3187,7 @@ MonoBehaviour:
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
-  m_horizontalMapping: 0
+  m_horizontalMapping: 1
   m_verticalMapping: 0
   m_uvLineOffset: 0
   m_geometrySortingOrder: 0
@@ -3953,9 +3953,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 917e7e5646816fd468021be40d134d84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _tooltipBody: {fileID: 797687965}
+  _tooltipBody: {fileID: 797687966}
   _tooltipHeader: {fileID: 534076412}
   _tooltipText: {fileID: 867813120}
+  mouseOffset: {x: 0, y: 0}
 --- !u!1 &1327529816 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2549285875593937868, guid: 204b893898c37cf4383e3f370a14f67c, type: 3}

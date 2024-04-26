@@ -12,7 +12,7 @@ public class IngredientBehavior : MonoBehaviour
 
     public override string ToString()
     {
-        return Stats.ToString();
+        return Stats.ToStringLine();
     }
 
     public void OnValidate()

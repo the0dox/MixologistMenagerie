@@ -36,6 +36,6 @@ public class PotionBehavior : MonoBehaviour
                 Stats += ingredient.Stats;
             }
         }
-        _tooltip.Tooltip = Stats.ToString();
+        _tooltip.Tooltip = Stats.ToStringLine();
     }
 }
