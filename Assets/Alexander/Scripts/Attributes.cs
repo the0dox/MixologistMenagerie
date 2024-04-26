@@ -103,4 +103,36 @@ public struct Attributes
         return output.ToString();
     }
 
+
+    // returns a safe string of thiss structs contents
+    public string ToStringLine()
+    {
+        StringBuilder output = new StringBuilder();
+        if(AttackUp != 0)
+        {
+            output.AppendLine("Attack Up: " + AttackUp);
+        }
+        if(Sweetness != 0)
+        {
+            output.AppendLine(" Sweetness: " + Sweetness);
+        }
+        if(Bitter != 0)
+        {
+            output.AppendLine(" Bitterness: " + Bitter);
+        }
+        if(FireDefense != 0)
+        {
+            output.AppendLine(" Fire Defense: " + FireDefense);
+        }
+        if(Saltiness != 0)
+        {
+            output.AppendLine(" Saltiness: " + Saltiness);
+        }
+        if(Speed != 0)
+        {
+            output.AppendLine(" Speed: " + Speed);
+        }
+        return output.ToString();
+    }
+
 }
