@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Text;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -64,7 +65,26 @@ public class SpeakingBehavior : MonoBehaviour
 
     public void Say(Attributes positiveStats, Attributes negativeStats)
     {
-        Say(Template.customRequest + " a potion with at least: " +  positiveStats + " and no more than " + negativeStats + "?");
+        StringBuilder output = new StringBuilder();
+        if(!string.IsNullOrEmpty(Template.customRequest))
+        {
+            output.Append(Template.customRequest);
+        }
+        else
+        {
+            output.Append("Can I get");
+        }
+        output.Append(" a potion");
+        if(positiveStats != Attributes.empty)
+        {
+            output.Append(" with at least: " + positiveStats);
+        }
+        if(negativeStats != Attributes.empty)
+        {
+            output.Append(" with no more than: " + negativeStats);   
+        }
+        output.Append("?");
+        Say(output.ToString());
     }
 
     public bool Ask()

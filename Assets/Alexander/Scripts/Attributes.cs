@@ -8,6 +8,7 @@ using UnityEngine;
 [System.Serializable]
 public struct Attributes
 {
+    public static readonly Attributes empty = new Attributes();
     // wip stats, subject to change
     public int AttackUp;
     public int Sweetness;
@@ -54,7 +55,7 @@ public struct Attributes
     // this is third one 'Equals'
     public static bool operator != (Attributes lhs, Attributes rhs)
     {
-        return lhs.AttackUp != rhs.AttackUp && lhs.Sweetness != rhs.Sweetness && lhs.Bitter != rhs.Bitter && lhs.FireDefense != rhs.FireDefense && lhs.Saltiness != rhs.Saltiness && lhs.Speed != rhs.Speed;
+        return !(lhs == rhs); 
     }
 
     public override bool Equals(object obj)
