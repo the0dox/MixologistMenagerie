@@ -70,14 +70,32 @@ public class BlenderBehavior : MonoBehaviour
     }
 
     public void OnMouseDown()
-    {
+    {   
         if(GameManager.GameActive)
         {
             Blend();
         }
     }
 
-    public void Blend()
+    public void OnButtonClicked()
+    {
+        if(GameManager.GameActive)
+        {
+            Blend();
+        }
+    }
+    
+    private void Undo()
+    {
+        if(_interactable)
+        {
+            AudioManager.PlaySound(SoundKey.DropFailure, transform.position);
+            _animationComponent.SetTrigger("Fail");
+            ClearContents();
+        }
+    }
+
+    private void Blend()
     {
         if(_interactable)
         {
